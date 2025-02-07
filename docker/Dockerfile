@@ -14,7 +14,7 @@ COPY apps/indexer/mix.exs ./apps/indexer/
 COPY apps/utils/mix.exs ./apps/utils/
 COPY apps/nft_media_handler/mix.exs ./apps/nft_media_handler/
 
-ENV MIX_ENV="dev"
+ENV MIX_ENV="prod"
 ENV MIX_HOME=/opt/mix
 RUN mix local.hex --force
 RUN mix do deps.get, local.rebar --force, deps.compile --skip-umbrella-children
